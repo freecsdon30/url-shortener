@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"github.com/freecsdon30/url-shortener/internal/config"
+)
 
 func main() {
-	fmt.Println("this a test")
+	config.LoadAllConfig()
 }
