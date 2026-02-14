@@ -3,17 +3,19 @@ package config
 import "github.com/freecsdon30/url-shortener/internal/utils"
 
 type DBConfig struct {
-	username string
-	password string
-	host     string
-	port     string
+	Username string
+	Password string
+	Host     string
+	Port     string
+	Name     string
 }
 
 func NewDBConfig() DBConfig {
 	return DBConfig{
-		username: utils.GetEnv("DB_USERNAME", "root"),
-		password: utils.GetEnv("DB_PASSWORD", "root"),
-		host:     utils.GetEnv("DB_HOST", "localhost"),
-		port:     utils.GetEnv("DB_PORT", "5432"),
+		Username: utils.GetEnv("DB_USERNAME", "root"),
+		Password: utils.GetEnv("DB_PASSWORD", "root"),
+		Host:     utils.GetEnv("DB_HOST", "localhost"),
+		Port:     utils.GetEnv("DB_PORT", "5432"),
+		Name:     utils.GetEnv("DB_NAME", "shortener"),
 	}
 }

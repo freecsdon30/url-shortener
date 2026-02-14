@@ -1,7 +1,7 @@
 package config
 
-var db DBConfig
+var DB DBConfig
 
 func LoadAllConfig() {
-	db = NewDBConfig()
+	DB = NewDBConfig()
 }
